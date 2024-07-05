@@ -8,8 +8,8 @@ import viteLogo from '/vite.svg'
 // import './bases/04-functions'
 // import './bases/05-deses-obj'
 // import './bases/06-deses-arr'
-import './bases/07-imp-exp.ts'
-
+//import './bases/07-imp-exp.ts'
+import './bases/08-promises'
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
   <div>
     <a href="https://vitejs.dev" target="_blank">
