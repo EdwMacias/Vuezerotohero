@@ -28,11 +28,7 @@ const getHeroByIdAsync = (id: number):Promise<Hero> =>{
     return new Promise( (resolve, reject) => {
         setTimeout(() => {
         const hero = getHeroById(id);
-        if (hero) {
-            resolve(hero);
-        } else {
-            reject(`No se pudo encontrar el héroe ${id}`);
-        }
+        hero ? resolve(hero) : reject(`No se pudo encontrar el héro #${id}`);
     }, 1500);
 
 })
