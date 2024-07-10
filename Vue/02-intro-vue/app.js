@@ -12,7 +12,7 @@ const { createApp, ref, computed } = Vue;
 const app = createApp({
 
   setup(){
-
+    const newMesssage = ref('');
     const showAuthor = ref(false);
     const quotes = ref(originalQuotes);
     const totalQuotes = computed(() => quotes.value.length);
@@ -21,12 +21,17 @@ const app = createApp({
     };
 
     const addQuote = () => {
-      quotes.value.unshift({ quote: 'Hola mundo', author: 'Batman' });
+      if (newMesssage.value === '') {
+        alert('Please enter a quote');
+        return;
+      }
+      quotes.value.unshift({ quote: newMesssage.value, author: 'Batman' });
+      newMesssage.value = '';
       console.log(quotes);
     };
     
     return {
-      quotes, showAuthor, toggleAuthor, addQuote, totalQuotes
+      quotes, showAuthor, toggleAuthor, addQuote, totalQuotes, newMesssage
     }
   }
 }).mount('#myApp')
