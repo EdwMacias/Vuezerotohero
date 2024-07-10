@@ -7,11 +7,20 @@
 </head>
 <body>
     <div id="myApp">
-        <h1>Batman Quotes</h1>
+        <h1>Batman Quotes {{totalQuotes}}</h1>
+        <input type="text" placeholder="agregar frase" @keypress.enter="addQuote">
+        <br>
+        <br>
+        <button @click="toggleAuthor">Mostrar autores</button>
+        <button @click="addQuote">Add Quote</button>
+
         <hr>
         <ul>
-            <li v-for="({ quote, author }, index) in quotes"> {{index+1}} - {{quote}} - <b>{{author}}</b>
+            <li v-for="({ quote, author }, index) in quotes">
+                <span>{{index+1}} - {{quote}}.</span>
+                <blockquote v-if="showAuthor"><b>{{author}}</b></blockquote>
             </li>
+
         </ul>
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
