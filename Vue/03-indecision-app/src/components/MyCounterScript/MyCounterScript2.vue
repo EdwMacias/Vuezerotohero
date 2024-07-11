@@ -9,5 +9,5 @@
         </div>
     </section>
 </template>
-<script lang="ts" src="./MyCounterScript2.ts"/>
+<script lang="ts" src="./MyCounterScript2.ts" />
 

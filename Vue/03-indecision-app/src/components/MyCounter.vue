@@ -6,27 +6,15 @@
         <div>
             <button class="btn"  @:click="increment">+1</button>
             <button class="btn" @:click="decrement">-1</button>
+            <button class="btn" @:click="reset">Reset</button>
         </div>
     </section>
 </template>
 
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue';
-interface Props {
-    value?:number;
-}
-
-const props =defineProps<Props>();
-const increment = () => {
-    counter.value++;
-};
-
-const decrement = () => {
-    counter.value--;
-};
-const counter = ref(props.value ?? 10);
-const squaredCounter = computed(() => counter.value * counter.value);
+import { useCounter } from '../composables/useCounter';
+const {counter, squaredCounter, increment, decrement, reset} = useCounter();
 
 </script>
 
