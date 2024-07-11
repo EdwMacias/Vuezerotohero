@@ -1,8 +1,10 @@
 <template>
     <h1>mi primera app</h1>
+
     <MyCounter :value="5"/>
     <MyCounterScript :value="10"/>
     <MyCounterScript2 :value="15"/>
+
 </template>
 <script lang="ts" setup>
 import MyCounter from './components/MyCounter.vue';

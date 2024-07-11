@@ -4,8 +4,8 @@
         <h3>Square: {{ squaredCounter }}</h3>
 
         <div>
-            <button @:click="increment">+1</button>
-            <button @:click="decrement">-1</button>
+            <button class="btn"  @:click="increment">+1</button>
+            <button class="btn" @:click="decrement">-1</button>
         </div>
     </section>
 </template>
@@ -29,3 +29,10 @@ const counter = ref(props.value ?? 10);
 const squaredCounter = computed(() => counter.value * counter.value);
 
 </script>
+
+
+<style>
+.btn{
+    @apply btn btn-primary p-5 rounded bg-blue-200 hover:bg-blue-700 mr-2;
+}
+</style>
