@@ -33,6 +33,6 @@ const squaredCounter = computed(() => counter.value * counter.value);
 
 <style>
 .btn{
-    @apply btn btn-primary p-5 rounded bg-blue-200 hover:bg-blue-700 mr-2;
+    @apply p-5 rounded bg-blue-200 hover:bg-blue-700 mr-2;
 }
 </style>
