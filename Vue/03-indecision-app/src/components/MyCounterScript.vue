@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { useCounter } from '../composables/useCounter';
-const {counter, squaredCounter, increment, decrement} = useCounter();
+const { counter, squaredCounter, increment, decrement } = useCounter();
 
 export default {
     props: {
@@ -21,6 +21,10 @@ export default {
             default: 0
         }
     },
+    emits: {
+
+    },
+
     setup() {
 
         return {
