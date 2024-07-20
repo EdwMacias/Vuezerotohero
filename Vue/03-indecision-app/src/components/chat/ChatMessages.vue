@@ -10,7 +10,6 @@
 import type { ChatMessage } from '@/interfaces/chat-message.interface';
 import ChatBubble from './ChatBubble.vue';
 import { ref, watch } from 'vue';
-import { sleep } from '@/helpers/sleep';
 interface Props {
   messages: ChatMessage[];
 }
@@ -26,5 +25,4 @@ watch(messages, () => {
     });
   }, 100)
 });
-
 </script>
