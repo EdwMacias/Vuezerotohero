@@ -3,7 +3,9 @@
         <h3>Counter: {{ counter }}</h3>
         <h3 data-testid="square-label">Square: {{ squaredCounter }}</h3>
         <div>
-            <button class="btn" @:click="counter--">-1</button>
+            <button class="btn" @:click="counter++">+1</button>
+
+            <button class="btn" id="btn-decrement" @:click="counter--">-1</button>
         </div>
     </section>
 </template>
